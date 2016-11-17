@@ -1,0 +1,23 @@
+{
+  "name": "listview-microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Irving09/listview-microservice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Irving09/listview-microservice/issues"
+  },
+  "homepage": "https://github.com/Irving09/listview-microservice#readme",
+  "dependencies": {
+    "aws-sdk": "^2.7.3"
+  }
+}
