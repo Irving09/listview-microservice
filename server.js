@@ -5,4 +5,4 @@ const router = require('./src/routes');
 
 app.use(router.routes());
 
-app.listen(3000);
+app.listen(process.env.port || 3000);
