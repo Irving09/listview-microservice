@@ -8,5 +8,11 @@ exports.getProducts = co.wrap(function* () {
 });
 
 exports.getProductById = co.wrap(function* (next) {
-    this.body = yield Adapter.getProductById(this.params.id);
+    // validate that id is an integer here
+    if (!isNaN(this.params.id) && Number(this.params.id) > 0) {
+        this.body = yield Adapter.getProductById(this.params.id);
+        this.status = 200;
+    } else {
+        this.throw(new Error(`${this.params.id} must be a valid product id`));
+    }
 });
