@@ -2,7 +2,6 @@ const Router = require('koa-router');
 const Bluebird = require('bluebird');
 const mysql = require('mysql2/promise');
 const co = require('co');
-const credentials = require('../../../credentials.json');
 
 const router = new Router({
     prefix: '/products'
@@ -10,11 +9,11 @@ const router = new Router({
 
 router.get('/', co.wrap(function* (next) {
     let connection = yield mysql.createConnection({
-        host: credentials.host,
-        port: credentials.port,
-        user: credentials.user,
-        password: credentials.password,
-        database: credentials.database,
+        host: process.env.MYSQL_HOST,
+        port: process.env.MYSQL_PORT,
+        user: process.env.MYSQL_USER,
+        password: process.env.MYSQL_PW,
+        database: process.env.MYSQL_DB,
         Promise: Bluebird
     });
 

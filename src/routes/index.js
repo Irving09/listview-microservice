@@ -1,5 +1,4 @@
 const Router = require('koa-router');
-const Promise = require('bluebird');
 const co = require('co');
 const api = require('./api');
 
