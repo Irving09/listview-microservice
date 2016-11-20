@@ -8,5 +8,5 @@ exports.getProducts = co.wrap(function* () {
 });
 
 exports.getProductById = co.wrap(function* (next) {
-    this.body = yield Promise.resolve('a single product with the id ' + this.params.id);
+    this.body = yield Adapter.getProductById(this.params.id);
 });
