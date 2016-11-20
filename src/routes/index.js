@@ -4,7 +4,7 @@ const api = require('./api');
 
 const router = new Router();
 
-router.get('/', co.wrap(function* (next) {
+router.get('/', co.wrap(function* () {
     this.redirect('/products');
 }));
 
