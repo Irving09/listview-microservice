@@ -25,8 +25,6 @@ exports.getProducts = co.wrap(function* () {
         LIMIT 20;
     `);
 
-    // TODO make connection to S3 bucket and grab image for each product id here
-
     connection.end();
     return products[0];
 });
