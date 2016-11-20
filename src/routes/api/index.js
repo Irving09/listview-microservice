@@ -1,13 +1,13 @@
 'use strict';
 
 const Router = require('koa-router');
-const controller = require('../../controllers');
+const Controller = require('../../controllers');
 
 const router = new Router({
     prefix: '/products'
 });
 
-router.get('/', controller.getProducts);
-router.get('/:id', controller.getProductById);
+router.get('/', Controller.getProducts);
+router.get('/:id', Controller.getProductById);
 
 module.exports = router;
