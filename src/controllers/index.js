@@ -9,9 +9,9 @@ exports.getProducts = co.wrap(function* () {
 
 exports.getProductById = co.wrap(function* () {
     this.assert(
-        !isNaN(this.params.id) || !this.params.id > 0,
+        !isNaN(this.params.id) && this.params.id > 0,
         401,
-        `Invalid product id`
+        `Invalid product ${this.params.id}`
     );
 
     try {

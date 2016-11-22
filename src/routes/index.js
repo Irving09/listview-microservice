@@ -1,15 +1,10 @@
 'use strict';
 
 const Router = require('koa-router');
-const co = require('co');
-const api = require('./api');
+const products = require('./product');
 
 const router = new Router();
 
-router.get('/', co.wrap(function* () {
-    this.redirect('/products');
-}));
-
-router.use(api.routes());
+router.use(products.routes());
 
 module.exports = router;

@@ -1,5 +1,7 @@
 'use strict';
 
+require('app-module-path').addPath(__dirname);
+
 const app = require('koa')();
 const router = require('./src/routes');
 

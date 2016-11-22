@@ -1,7 +1,7 @@
 'use strict';
 
 const Router = require('koa-router');
-const Controller = require('../../controllers');
+const Controller = require('src/controllers');
 
 const router = new Router({
     prefix: '/products'
