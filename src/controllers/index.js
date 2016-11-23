@@ -3,8 +3,10 @@
 const Adapter = require('../adapters');
 const co = require('co');
 
+const LIMIT = 20;
+
 exports.getProducts = co.wrap(function* () {
-    this.body = yield Adapter.getProducts();
+    this.body = yield Adapter.getProducts(this.query.limit ? this.query.limit : LIMIT);
 });
 
 exports.getProductById = co.wrap(function* () {

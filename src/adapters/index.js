@@ -13,7 +13,7 @@ const CREDENTIALS = {
     Promise: Bluebird
 };
 
-exports.getProducts = co.wrap(function* () {
+exports.getProducts = co.wrap(function* (limit) {
     let connection = yield mysql.createConnection(CREDENTIALS);
 
     let products = yield connection.query(`
@@ -22,7 +22,7 @@ exports.getProducts = co.wrap(function* () {
         FROM
             product
         ORDER BY rating DESC
-        LIMIT 20;
+        LIMIT ${limit};
     `);
 
     connection.end();
