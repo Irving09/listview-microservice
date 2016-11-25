@@ -70,7 +70,6 @@ fabric.properties
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
 
@@ -92,6 +91,7 @@ Temporary Items
 
 # project specific
 credentials.json
+setupelb.sh
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
