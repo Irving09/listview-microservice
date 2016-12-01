@@ -6,7 +6,10 @@ const co = require('co');
 const LIMIT = 20;
 
 exports.getProducts = co.wrap(function* () {
-    this.body = yield Adapter.getProducts(this.query.limit ? this.query.limit : LIMIT);
+    this.body = yield Adapter.getProducts({
+        limit: this.query.limit ? this.query.limit : LIMIT,
+        search: this.query.search ? this.query.search : ''
+    });
 });
 
 exports.getProductById = co.wrap(function* () {
