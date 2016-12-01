@@ -91,7 +91,7 @@ Temporary Items
 
 # project specific
 credentials.json
-setupelb.sh
+setup-eb.sh
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
